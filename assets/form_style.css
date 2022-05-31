@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+h1{
+    text-align: center;
+    padding: 10px;
+    margin: 5px;
+    color: teal;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+}
+.form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: teal;
+    color: white;
+}
+.form form h2{
+    text-align: center;
+    padding: 10px;
+}
+.form form h3{
+    text-align: left;
+    font-size: 1.2rem;
+    padding:10px 0;
+}

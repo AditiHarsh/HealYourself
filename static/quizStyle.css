@@ -1,0 +1,145 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+html{
+    font-size: 20px;
+    background-color: white;
+    scroll-behavior: smooth;
+}
+a{
+    text-decoration: none;
+}
+img{
+    margin-bottom: 1.5rem;
+    max-width: 100%;
+    border-radius: 20px;
+}
+h1{
+    font-family: 'Roboto Slab', serif;
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+ul{
+    list-style: none;
+}
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+.container{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+#header{
+    position: fixed;
+    z-index: 10000;
+    min-height: 10vh;
+    width: 100%;
+    background-color: teal;
+    color: white;
+}
+#header .logo .border{
+    width: 80%;
+    border: 1px solid white;
+    margin: auto;
+
+}
+#questionnaire{
+    position: relative;
+    margin-top: 15vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /* min-height: 200vh; */
+    margin-bottom: 100px;
+}
+.questionnaire{
+    display: flex;
+    flex-direction: column;
+    /* min-height: 100vh; */
+}
+#questionnaire .formSection{
+    width: 70%;
+    text-align: left;
+
+}
+#questionnaire .form-item{
+    margin: 1.2rem;
+
+}
+#questionnaire .select{
+    padding: .2rem;
+    margin: .2rem;
+    border: none;
+    font-family: 'Poppins',sans-serif;
+}
+#questionnaire .formSection .btn{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+#questionnaire .formSection .btn input{
+    font-size: 1.2rem;
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: none;
+    background-color: teal;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+}
+#questionnaire .formSection .btn input:hover{
+    background-color: rgb(3, 67, 67);
+}
+/* footer style start */
+#footer {
+    background-color: teal;
+}
+.container-child{
+    flex-direction: column;
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    padding: 100px 0;
+    font-size: 1rem;
+}
+#footer .container-child{
+    padding: 25px 0;
+}
+
+#footer .container, .bi, #footer a{
+    min-height: 10vh;
+    color: white;
+}
+
+#footer a:hover, .bi:hover{
+    font-size: 1.2rem;
+    
+}
+#footer ul li{
+    display: inline-block;
+    padding: 1rem;
+}
+#footer .detail{
+    color: white;
+    text-align: center;
+    border-top: 2px solid white;
+    padding: 1.1rem 1.3rem;
+    font-size: .8rem;
+}
+#footer .detail span{
+    color: rgb(23, 4, 4);
+}
+

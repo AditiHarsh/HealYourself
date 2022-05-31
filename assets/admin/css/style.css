@@ -1,0 +1,442 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+html{
+    font-size: 20px;
+    background-color: white;
+    scroll-behavior: smooth;
+}
+a{
+    text-decoration: none;
+}
+img{
+    margin-bottom: 1.5rem;
+    max-width: 100%;
+    border-radius: 20px;
+}
+h1{
+    font-family: 'Roboto Slab', serif;
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+ul{
+    list-style: none;
+}
+.bi{
+    color: black;
+    font-size: 1.5rem;
+}
+.container{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* Header style */
+#header{
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: auto;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 0px, rgba(0, 128, 128, 0.22) 0px 5px 30px;
+    padding-top: 5px;
+}
+#header .header{
+    min-height: 8vh;
+    margin-top: 1rem;
+    width: 90%;
+    margin: auto;
+   
+}
+#header .header .logo{
+    display: inline-block;
+    font-size: .8rem;
+    text-align: center;
+    color: teal;
+    font-family: 'Poppins', sans-serif;
+}
+#header .header .logo h2{
+    letter-spacing: .2rem;
+}
+#header .header .logo .border{
+    background-color: teal;
+    height: 100%;
+    width: 80%;
+    border: 1px solid teal;
+    margin: auto;
+
+}
+
+#header .header .navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    max-width: 1300px;
+    padding: 0 10px;
+}
+#header .nav-list ul{
+    list-style: none;
+    position: absolute;
+    background-color:white;
+    width: 100vw;
+    height: 100vh;
+    left: 100%;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    overflow: hidden;
+    transition: .6s ease left;
+}
+#header .nav-list ul.active{
+    left: 0;
+}
+#header .nav-list ul.deactive{
+    display: none;
+}
+#header .nav-list ul a{
+    font-family: 'Poppins',sans-serif;
+    font-size: 2rem;
+    font-weight: 500;
+    letter-spacing: .2rem;
+    color: teal;
+    text-transform: uppercase;
+    padding: 20px;
+    display: block;
+}
+#header .nav-list ul a::after{
+    content: attr(data-after);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    color: rgb(0, 128, 128, 0.1);
+    letter-spacing: 50px;
+    font-size: 8rem;
+    z-index: -1;
+    transition: .3s ease letter-spacing;
+}
+#header .nav-list ul li:hover a::after{
+    transform: translate(-50%, -50%) scale(1);
+    letter-spacing: initial;
+}
+#header .hamburger{
+    position: relative;
+    height: 60px;
+    width: 60px;
+    display: inline-block;
+    border: 3px solid teal;
+    border-radius: 50%;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transform: scale(.8);
+    margin-right: 20px;
+}
+#header .hamburger::after{
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    border: 6px solid teal;
+    animation: hamburger_puls 1s ease infinite;
+}
+#header .hamburger .bar{
+    height: 2px;
+    width: 30px;
+    position: relative;
+    background-color: teal;
+    z-index: -1;
+}
+#header .hamburger .bar::after,
+#header .hamburger .bar::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    background-color: teal;
+    transition: .3s ease top, bottom;
+}
+#header .hamburger .bar::after{
+    top: 8px;
+}
+#header .hamburger .bar::before{
+    bottom: 8px;
+}
+#header .hamburger.active .bar::before{
+    bottom: 0;
+}
+#header .hamburger.active .bar::after{
+    top: 0;
+}
+
+/* Header style end */
+/* Hero section style */
+
+#hero .hero{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    margin: auto;
+    font-size: 20px;
+}
+#hero .hero .hero-top{
+    font-size: .9em;
+    color: teal;
+}
+#hero .hero .hero-mid{
+    text-align: center;
+    padding: .8em 0;
+    width: 90%;
+}
+
+.button{
+    background-color: teal;
+    /* font-size: 1.4rem; */
+    padding: 10px;
+    color: white;
+    border-radius: 10px;
+}
+.button a{
+    color: white;
+}
+#hero .button{
+    margin-top: 3rem;
+}
+
+/* Hero section Style End */
+/* what we are section */
+
+#what-we-are .what-we-are-top{
+    margin-bottom: 3rem;
+}
+
+/* what we are section end */
+/* services Section */
+.container-child{
+    flex-direction: column;
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    padding: 100px 0;
+    font-size: 1rem;
+}
+#services .service-bottom {
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+}
+#services .service-bottom .service-item{
+    font-size: .8em;
+    margin-top: 30px;
+    padding: 1rem;
+    border-radius: 5%;
+    box-shadow: rgba(0, 128, 128, 0.35) 0px 50px 100px -20px, rgba(0, 128, 128, 0.35) 0px 30px 60px -30px, rgba(0, 128, 128, 0.35) 0px -2px 6px 0px inset;
+}
+
+#services .service-bottom .service-item a{
+    color: blue;
+}
+#services a:hover{
+text-decoration: underline;
+padding-right: 3px;
+transition: .4s;
+}
+#services .bi{
+    color: blue;
+    font-size: small;
+}
+
+/* Services section end */
+/* FAQ style start */
+#faq .container{
+    flex-direction: column;
+    text-align: center;
+}
+#faq .faq-container{
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    width: 60%;
+    text-align: left;
+}
+#faq .hr-line{
+    width: 100%;
+    margin: auto;
+}
+#faq .faq-page{
+    color: #444;
+    cursor: pointer;
+    padding: 30px 20px;
+    width: 100%;
+    border: none;
+    outline: none;
+    transition: 0.7s ease-in;
+    margin: auto;
+}
+#faq .faq-body{
+    margin: auto;
+    width: 90%;
+    padding: auto;
+}
+#faq .faq-body p{
+    font-size: .85rem;
+}
+#faq .active, #faq .faq-page:hover{
+    background-color: #f9f9f9;
+}
+#faq .faq-body{
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+}
+#faq .faq-page:after{
+    content: '\02795';
+    font-size: 13px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
+}
+#faq .active:after{
+    content: '\2796';
+}
+/* FAQ style end */
+
+/* footer style start */
+#footer {
+    background-color: teal;
+    /* border: 2px solid red; */
+}
+#footer .container-child{
+    padding: 25px 0;
+}
+#footer .container, .bi, #footer a{
+    min-height: 10vh;
+    color: white;
+}
+
+#footer a:hover, .bi:hover{
+    font-size: 1.2rem;
+    
+}
+#footer ul li{
+    display: inline-block;
+    padding: 1rem;
+}
+#footer .detail{
+    color: white;
+    text-align: center;
+    border-top: 2px solid white;
+    padding: 1.1rem 1.3rem;
+    font-size: .8rem;
+}
+#footer .detail span{
+    color: rgb(23, 4, 4);
+}
+/* footer style end */
+@keyframes hamburger_puls {
+    0%{
+        opacity: 1;
+        transform: scale(1);
+    }
+    100%{
+        opacity: 0;
+        transform: scale(1.3);
+    }
+}
+@media screen and (max-width: 769px){
+    html{
+        font-size: 15px;
+    }
+}
+@media screen and (min-width: 769px){
+    h1{
+        font-size: 2.3rem;
+    }
+    
+}
+@media screen and (min-width: 1020px){
+    #header .hamburger{
+        display: none;
+    }
+    #header .nav-list ul{
+        position: initial;
+        display: block;
+        height: auto;
+        width: fit-content;
+        background-color: transparent;
+    }
+    #header .nav-list ul li{
+        display: inline-block;
+    }
+#header .nav-list ul li a{
+    font-size: 1rem;
+    padding: .4rem;
+    font-weight: 600;
+}
+#header .nav-list ul li a:hover{
+    background-color: teal;
+    color: white;
+    border-radius: .2rem;
+}
+    #header .nav-list ul a::after{
+        display: none;
+    }
+
+    #what-we-are .what-we-are{
+        flex-direction: row;
+    }
+    #what-we-are .container{
+        min-height: 50vh;
+    }
+    #what-we-are .what-we-are-top{
+        text-align: left;
+    }
+    #what-we-are .what-we-are .child{
+        width: 50%;
+        padding:.6rem;
+    }
+    .child img{
+        border-radius: 0;
+    }
+}
+@media screen and (min-width: 1200px) {
+    h1{
+        font-size: 2.5rem;
+    }
+    .button{
+        padding: 12px;
+        font-size: 1.2rem;
+    }
+    #hero .hero .hero-top{
+        font-size: 1.2rem;
+        letter-spacing: .15em;
+    }
+    #services .service-bottom {
+        flex-direction: row;
+    }
+    #services .service-bottom .service-item{
+        margin: 10px;
+    }
+    
+    
+}

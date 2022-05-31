@@ -1,0 +1,138 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+html{
+    font-size: 20px;
+    background-color: white;
+    scroll-behavior: smooth;
+}
+a{
+    text-decoration: none;
+}
+img{
+    margin-bottom: 1.5rem;
+    max-width: 100%;
+    border-radius: 20px;
+}
+h1{
+    font-family: 'Roboto Slab', serif;
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+ul{
+    list-style: none;
+}
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+.container{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+#header{
+    position: fixed;
+    z-index: 10000;
+    min-height: 10vh;
+    width: 100%;
+    background-color: teal;
+    color: white;
+}
+#header .logo .border{
+    width: 80%;
+    border: 1px solid white;
+    margin: auto;
+
+}
+.main{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.popup{
+    position: relative;
+    min-height: 40vh;
+    background-color: #ffffff;
+    width: 600px;
+    padding: 30px 40px;
+    border-radius: 8px;
+    font-family: "Poppins",sans-serif;
+    display: block; 
+    text-align: center;
+    margin: 200px auto;
+    padding-top: 150px;
+}
+
+.popup h2{
+  margin-top: -20px;
+  font-size: 35px;
+  /* font-family: 'Roboto Slab', serif; */
+}
+.popup p{
+    font-size: 18px;
+    text-align: center;
+    margin: 20px 0;
+    line-height: 25px;
+    color: teal;
+}
+.popup a{
+    position: relative;
+    margin: 60px 0 20px 0;
+    text-align: center;
+    background-color: teal;
+    border-radius: 20px;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 8px 20px;
+    font-size: 20px;
+}
+#footer {
+    background-color: teal;
+    position: relative;
+    width: 100%;
+}
+.container-child{
+    flex-direction: column;
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    padding: 100px 0;
+    font-size: 1rem;
+}
+#footer .container-child{
+    padding: 25px 0;
+}
+
+#footer .container, .bi, #footer a{
+    min-height: 10vh;
+    color: white;
+}
+
+#footer a:hover, .bi:hover{
+    font-size: 1.2rem;
+    
+}
+#footer ul li{
+    display: inline-block;
+    padding: 1rem;
+}
+#footer .detail{
+    color: white;
+    text-align: center;
+    border-top: 2px solid white;
+    padding: 1.1rem 1.3rem;
+    font-size: .8rem;
+}
+#footer .detail span{
+    color: rgb(23, 4, 4);
+}

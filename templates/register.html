@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'form_style.css' %}">
+    <title>Appointment form</title>
+</head>
+<body>
+    <h1>Appointment form</h1>
+    <div class="form">
+        <form action="" method="post" id="appointment">
+            {% csrf_token %}
+            <h2>Make Appointment Here</h2>
+            <h3>Enter patient details</h3>
+            <label for="fname">Name :</label>
+            <input type="text" name="fname" id="name" placeholder="Full Name"><br><br>
+            
+            <label for="phone">Phone no. :</label>
+            <input type="number" name="phone" id="phone" placeholder="+91 1112223334"><br><br>
+
+            <label for="email">Email :</label>
+            <input type="email" name="email" id="email" placeholder="Email"><br><br>
+
+            <label for="age">Age :</label>
+            <input type="number" name="age" id="age" placeholder="Age"><br><br>
+            
+            <label for="gender">Gender :</label>
+            <input type="radio" name="gender" id="male"><span id="male">&nbsp; Male</span>&nbsp;&nbsp;
+            <input type="radio" name="gender" id="female"><span id="female">&nbsp; Female</span>&nbsp;&nbsp;
+            <input type="radio" name="gender" id="others"><span id="others">&nbsp; Others</span>&nbsp;&nbsp;<br><br>
+
+            <label for="doctor">Doctor to Consult :</label>
+            <input list="doctors" name="doctor" id="doctor">
+            <datalist id="doctors">
+                <option value="Dr. Amartya Prakash"></option>
+                <option value="Dr. Aprajita Srivastava"></option>
+                <option value="Dr. Vinay Pandey"></option>
+            </datalist>
+            
+            <input type="Submit" name="appoint" id="appoint" value="Submit">
+
+        </form>
+        
+    </div>
+    <div>
+        {% for message in messages %}
+        <h1>{{ message }}</h1>
+        {% endfor %}
+    </div>
+    
+</body>
+</html>

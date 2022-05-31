@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Signup</title>
+    <link rel="stylesheet" href="{% static 'formstyle.css' %}">
+    <link rel = "icon" href = "static\img\logowhite.png"  type = "image/x-icon">
+</head>
+<body>
+   <div class="hero container">
+       <div class="form-box">
+           <div class="button-box">
+               <div id="btn"></div>
+               <button type="button" class="toggle-btn" onclick="login()">Login</button>
+               <button type="button" class="toggle-btn" onclick="signin()">Sign Up</button>
+           </div>
+
+           <form action="" class="input-group" id="login">
+               <input type="text" class="input-field" placeholder="User Id" required>
+               <input type="text" class="input-field" placeholder="User Password" required>
+               <input type="checkbox" class="check-box"><span>Remember Password</span>
+               <button type="submit" class="submit-btn">Log in</button>
+           </form>
+           <form action="" class="input-group" id="signin">
+            <input type="text" class="input-field" placeholder="User Id" required>
+            <input type="email" class="input-field" placeholder="Email Id" required>
+            <input type="text" class="input-field" placeholder="User Password" required>
+            <input type="checkbox" class="check-box"><span>I agree to terms and conditions</span>
+            <button type="submit" class="submit-btn">Sign Up</button>
+        </form>
+
+       </div>
+
+   </div>
+   <script src="static\js\formapp.js"></script>
+</body>
+</html>

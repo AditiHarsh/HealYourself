@@ -1,0 +1,187 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealYourSelf</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto+Slab:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+</head>
+<body>
+    <!-- Header -->
+    <section id="header">
+        <div class="header container">
+            <div class="navbar">
+                <div class="logo">
+                    <!-- <a href="#">
+                        <img src="../img/logowhite.png" alt="HealYourSelf logo" width="150">
+                    </a> -->
+                    <h2>HealYourself</h2>
+                    <div class="border"></div>
+                    <h3>F5 Your Life</h3>
+                </div>
+                <div class="nav-list">
+                    <div class="hamburger"><div class="bar"></div></div>
+                    <ul>
+                        <li><a href="#hero" data-after="Home" class="menu">Home</a></li>
+                        <li><a href="#what-we-are" data-after="About" class="menu">About</a></li>
+                        <li><a href="#services" data-after="Services" class="menu">Services</a></li>
+                        <li><a href="#faq" data-after="FAQs" class="menu">FAQs</a></li>
+                        <li><a href="templates\form.html" target="_blank" data-after="Log In" class="menu">Log in</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Header End -->
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="hero container">
+            <div class="hero-top">
+                <h2>HealYourself : F5 Your Life</h2>
+            </div>
+            <div class="hero-mid">
+                <h1>Take a free mental health test</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem fuga et magni, iusto voluptatibus nulla aut atque minus asperiores! Saepe eaque similique dolores architecto sunt autem error reiciendis molestiae!</p>
+            </div>
+            <div class="button hero-bottom">
+                <a href="#">Take Test</a>
+            </div>
+
+        </div>
+    </section>
+    <!-- HeroSection End -->
+    <section id="what-we-are">
+        <div class="what-we-are container container-child">
+            <div class="what-we-are-top child">
+                <h1>What we are?</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, ratione possimus. Provident nemo eum, repellat ad deserunt voluptate hic illo.</p>
+            </div>
+            <div class="what-we-are-bottom child">
+                <img src="static\img\20211209_122719.png" alt="">
+            </div>
+        </div>
+    </section>
+    <!-- service Section -->
+    <section id="services">
+        <div class="service container container-child">
+            <div class="service-top">
+                <h1 class="service-title">Problems Related to mental Health</h1>
+            </div>
+            <div class="service-bottom">
+                <div class="service-item">
+                    <div class="image">
+                        <img src="static\img\pexels-karolina-grabowska-4021779.jpg" alt="image">
+                    </div>
+                    <h2>What is Stress?</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis ipsam incidunt cumque repellendus minima. Fugiat?</p>
+                    <a href="#">Read More </a><i class="bi bi-arrow-right"></i>
+                </div>
+                <div class="service-item">
+                    <div class="image">
+                        <img src="static\img\pexels-karolina-grabowska-4021779.jpg" alt="image">
+                    </div>
+                    <h2>What is Stress?</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis ipsam incidunt cumque repellendus minima. Fugiat?</p>
+                    <a href="#">Read More </a><i class="bi bi-arrow-right"></i>
+                </div>
+                <div class="service-item">
+                    <div class="image">
+                        <img src="static\img\pexels-karolina-grabowska-4021779.jpg" alt="image">
+                    </div>
+                    <h2>What is Stress?</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis ipsam incidunt cumque repellendus minima. Fugiat?</p>
+                    <a href="#">Read More </a><i class="bi bi-arrow-right"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Service Section End -->
+<!-- FAQ Section start -->
+<section id="faq">
+    <div class="faq container">
+        <div class="faq-top">
+            <h1>Frequently Asked Questions (FAQs)</h1>
+        </div>
+        <div class="faq-bottom faq-container">
+            <div class="faq-one">
+                <h4 class="faq-page">Why do we need to know about mental health?</h4>
+                <div class="faq-body">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet, deserunt. Quam in totam minus eveniet culpa doloremque sit, eaque dolor!</p>
+                </div>
+            </div>
+            <hr class="hr-line">
+            <div class="faq-one">
+                <h4 class="faq-page">Why do we need to know about mental health?</h4>
+                <div class="faq-body">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet, deserunt. Quam in totam minus eveniet culpa doloremque sit, eaque dolor!</p>
+                </div>
+            </div>
+            <hr class="hr-line">
+            <div class="faq-two">
+                <h4 class="faq-page">Why do we need to know about mental health?</h4>
+                <div class="faq-body">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet, deserunt. Quam in totam minus eveniet culpa doloremque sit, eaque dolor!</p>
+                </div>
+            </div>
+            <hr class="hr-line">
+            <div class="faq-three">
+                <h4 class="faq-page">Why do we need to know about mental health?</h4>
+                <div class="faq-body">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet, deserunt. Quam in totam minus eveniet culpa doloremque sit, eaque dolor!</p>
+                </div>
+            </div>
+            <hr class="hr-line">
+            <div class="faq-four">
+                <h4 class="faq-page">Why do we need to know about mental health?</h4>
+                <div class="faq-body">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet, deserunt. Quam in totam minus eveniet culpa doloremque sit, eaque dolor!</p>
+                </div>
+            </div>
+            <hr class="hr-line">
+        </div>
+    </div>
+</section>
+<!-- FAQ Section End -->
+
+    <!-- footer section -->
+
+    <section id="footer">
+        <div class="footer container container-child">
+            <div class="footer-top">
+                <ul>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#what-we-are">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                </ul>
+            </div>
+            <div class="footer-bottom">
+                <div class="social">
+                    <ul>
+                        <li><a href="#"><i class="bi bi-facebook"></i></a></li>
+                        <li><a href="#"><i class="bi bi-instagram"></i></a></li>
+                        <li><a href="#"><i class="bi bi-whatsapp"></i></a></li>
+                        <li><a href="#"><i class="bi bi-telegram"></i></a></li>
+                    </ul>
+                </div>
+                <div class="info">
+                    <h3>HealYourself : F5 Your Life</h3>
+                    <p>Address: BBD Educational Group Uttardhauna, 226028, Lucknow</p>
+                </div>
+            </div>
+        </div>
+        <div class="detail">
+            <p>If you are in a life threatning situation - don't use this site. Call <span>+1(800) 273-8255</span> or <span>use these resources </span> to get immediate help</p>
+        </div>
+    </section>
+    <!-- footer section end -->
+    <script src="static\js\app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

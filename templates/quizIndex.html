@@ -1,0 +1,320 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealYourSelf</title>
+    <link rel="stylesheet" href="{% static 'quizStyle.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto+Slab:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+<link rel = "icon" href = "../img/logowhite.png"    type = "image/x-icon">
+</head>
+<body>
+    <!-- Header -->
+    <section  id="header" class="header container">
+        <div class="logo">
+            <h2>HealYourself</h2>
+            <div class="border"></div>
+            <h3>F5 Your Life</h3>
+        </div>
+    </section>
+    <!-- Header End -->
+    <section class="questionnaire" id="questionnaire">
+        <div class="heading">
+            <h2>Mental Health Questionnaire</h2>
+        </div>
+        <div class="formSection">
+            <form action="templates/result.html" class="formMain">
+		        
+                <div class="form-item">
+                <label for="email">Email: </label><input type="email" name="email" id="email" placeholder="Enter your Email" required>
+                </div>
+                <div class="form-item">
+                    <label for="name">Full Name: </label><input type="name" name="name" id="name" placeholder="Enter your Full Name" required><br>
+                </div>
+                <div class="form-item">
+                    <label for="gender">Gender:</label>
+                    <label for="male">Male</label><input type="radio" name="gender" id="male">
+                    <label for="female">Female</label><input type="radio" name="gender" id="female">
+                    <label for="others">Others</label><input type="radio" name="gender" id="others">
+                </div>
+                <div class="form-item">
+                    <label for="employment">1- Employment Status:</label>
+                    <select name="employment" id="employment" class="select" required>
+                        <option value="">--Select--</option>
+                        <option value="employed">Employed</option>
+                        <option value="unemployed">Unemployed</option>
+                        <option value="selfemployed">Self-Employed</option>
+                        <option value="student">Student</option>
+                    </select>
+                </div>
+                <div class="form-item">
+                    <label for="city">2- City:</label>
+                    <select name="city" id="city" class="select" required>
+                        <option value="">--Select--</option>
+                        <option value="1">Tier 1 (Delhi, Mumbai, Bangalore, Chennai, Kolkata)</option>
+                        <option value="2">Tier 2 (Capital cities Eg. Lucknow )</option>
+                        <option value="3">Tier 3 (Other cities/towns)</option>
+                    </select>
+                </div>
+                <div class="form-item">
+                    <label for="feel">3-How are you feeling today?</label>
+                    <select name="feel" id="feel" class="select"  required>
+                        <option value="">--Select--</option>
+                        <option value="good">Good</option>
+                        <option value="fine">Fine</option>
+                        <option value="sad">Sad</option>
+                        <option value="depress">Depressed</option>
+                    </select>
+                </div>
+                <div class="form-item">    
+                    <label for="ifsad">4- (If sad)have you been in the same mental state for the past few days?</label>
+                    <select name="ifsad" id="ifsad" class="select">
+                        <option value="">--Select--</option>
+                        <option value="3">Yes</option>
+                        <option value="1">No</option>
+                        <option value="2">May be</option>
+                    </select>
+                </div>
+                <div class="form-item">
+                    <label for="sleep">5- Have you been sleeping and eating properly for last few days?</label>
+                    <select name="sleep" id="sleep" class="select"  required>
+                        <option value="">--Select--</option>
+                        <option value="1">Yes</option>
+                        <option value="3">No</option>
+                        <option value="2">May be</option>
+                    </select>
+                </div>
+                <div class="form-item">    
+                    <label for="stress">6- Your stress is related to which of the following areas?
+                    </label><br>
+                    <input type="checkbox" name="stress" id="" value="home">Home <br>
+                    <input type="checkbox" name="stress" id="" value="work">Work <br>
+                    <input type="checkbox" name="stress" id="" value="financial">Financial <br>
+                    <input type="checkbox" name="stress" id="" value="personla">Personal <br>
+                    <input type="checkbox" name="stress" id="" value="none">None
+                </div>
+                <div class="form-item">
+                    <label for="sadness">7- Is your sadness momentarily or has it been constant for a long time?</label>
+                    <select name="sadness" id="sadness" class="select">
+                        <option value="">--Select--</option>
+                        <option value="1">Not sad</option>
+                        <option value="2">For some time</option>
+                        <option value="3">Significant time</option>
+                        <option value="4">Long time</option>
+                    </select>
+                </div>
+                <div class="form-item">
+                    <label for="daytime">8- At what time of the day you extremely feel low?</label>
+                    <select name="daytime" id="daytime" class="select">
+                        <option value="">--Select--</option>
+                        <option value="morning">Morning</option>
+                        <option value="afternoon">Afternoon</option>
+                        <option value="evening">Evening</option>
+                    </select>
+                </div>
+                <div class="form-item">
+                    <label for="suddenchange">9- Has there been a sudden and huge change in your life?</label>
+                    <select name="suddenchange" id="suddenchange" class="select">
+                        <option value="">--Select--</option>
+                        <option value="3">Yes</option>
+                        <option value="1">No</option>
+                        <option value="2">Not Sure</option>
+                    </select>
+                </div>
+                <div class="form-item">
+                    <label for="littlepleasure">10- How frequently have you had little pleasure or interest in the activities you usually enjoy?</label>
+                    <select name="littlepleasure" id="littlepleasure" class="select">
+                        <option value="">--Select--</option>
+                        <option value="4">Very Often</option>
+                        <option value="3">Often</option>
+                        <option value="2">Sometimes</option>
+                        <option value="1">Never</option>
+                    </select>
+                </div>
+                <div class="form-item">
+                    <label for="support">11- Describe how ‘supported’ you feel by others around you – your friends, family, or otherwise.</label>
+                    <select name="support" id="support" class="select">
+                        <option value="">--Select--</option>
+                        <option value="4">Not at all</option>
+                        <option value="3">Little bit</option>
+                        <option value="2">Satisfactory</option>
+                        <option value="1">Highly Supportive</option>
+                    </select>
+                </div>
+                <div class="form-item">
+                    <label for="dointhings">12- How frequently have you been doing things that mean something to you or your life?</label>
+                    <select name="doingthings" id="doingthings" class="select">
+                        <option value="">--Select--</option>
+                        <option value="1">Very Often</option>
+                        <option value="2">Often</option>
+                        <option value="3">Sometimes</option>
+                        <option value="4">Never</option>
+                    </select>
+                </div>
+                <div class="form-item">
+                    <label for="medicalleave">13- How easy is it for you to take medical leave for a mental health condition?</label>
+                    <select name="medicalleave" id="medicalleave" class="select">
+                        <option value="">--Select--</option>
+                        <option value="1">Very Easy</option>
+                        <option value="2">Easy</option>
+                        <option value="3">Not to say</option>
+                        <option value="4">Difficult</option>
+                    </select>
+                </div>
+                <div class="form-item">
+                    <label for="abuse">14- How often do you make use of substance abuse(e.g. smoking, alcohol)?</label>
+                    <select name="abuse" id="abuse" class="select">
+                        <option value="">--Select--</option>
+                        <option value="4">Very Often</option>
+                        <option value="3">Often</option>
+                        <option value="2">Sometimes</option>
+                        <option value="1">Never</option>
+                    </select>
+                </div>
+                <div class="form-item">
+                    <label for="cry">15- How often do you get offended or angry or start crying ?
+                    </label>
+                    <select name="cry" id="cry" class="select">
+                        <option value="">--Select--</option>
+                        <option value="4">Very Often</option>
+                        <option value="3">Often</option>
+                        <option value="2">Sometimes</option>
+                        <option value="1">Never</option>
+                    </select>
+                </div>
+                <div class="form-item">
+                    <label for="affect">16- Has the COVID-19 pandemic affected your mental well being?</label>
+                    <select name="affect" id="affect" class="select">
+                        <option value="">--Select--</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                        <option value="notSure">Not sure</option>
+                    </select>
+                </div>
+                <div class="form-item">
+                    <label for="sleeptime">17- How many hours do you spend per day on watching mobile phone, laptop, computer, television, etc.?</label>
+                    <select name="sleeptime" id="sleeptime" class="select">
+                        <option value="">--Select--</option>
+                        <option value="1">1-2 hours</option>
+                        <option value="2">2-5 hours</option>
+                        <option value="3">5-10 hours</option>
+                        <option value="4">More than 10 hours</option>
+                    </select>
+                </div>
+                <div class="form-item">
+                    <label for="failure">18- Do you feel bad about yourself — or that you are a failure or have let yourself or your family down?</label>
+                    <select name="failure" id="failure" class="select">
+                        <option value="">--Select--</option>
+                        <option value="3">Yes</option>
+                        <option value="1">No</option>
+                        <option value="2">May be</option>
+                    </select>
+                </div>
+                <div class="form-item">
+                    <label for="concentrate">19- Having trouble concentrating on things, such as reading the newspaper or watching television, or studying?</label>
+                    <select name="concentrate" id="concentrate" class="select">
+                        <option value="">--Select--</option>
+                        <option value="3">Yes</option>
+                        <option value="1">No</option>
+                        <option value="2">May be</option>
+                    </select>
+                </div>
+                <div class="form-item">
+                    <label for="therapy">20- Have you taken any therapy or medication in the near past for mental health?</label>
+                    <select name="therapy" id="therapy" class="select">
+                        <option value="">--Select--</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                        <option value="maybe">May be</option>
+                    </select>
+                </div>
+                <div class="form-item">
+                    <label for="lonely">21- How likely do you feel yourself vulnerable or lonely?
+                    </label>
+                    <select name="lonely" id="lonely" class="select">
+                        <option value="">--Select level--</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+                <div class="form-item">
+                    <label for="lonely">22- How comfortable are you in talking about your mental health?
+                    </label>
+                    <select name="talk" id="lonely" class="select">
+                        <option value="">--Select level--</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+                <div class="form-item">
+                    <label for="lonely">23- How confident you have been feeling in your capabilities recently.
+                    </label>
+                    <select name="confidence" id="lonely" class="select">
+                        <option value="">--Select level--</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+                <div class="form-item">
+                    <label for="lonely">24- If sad, how likely are you to take an appointment with a psychologist or a counsellor for your current mental state?
+                    </label>
+                    <select name="appoint" id="lonely" class="select">
+                        <option value="">--Select level--</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div> 
+                <div class="btn">
+                    <input type="submit" value="Submit">
+                </div>
+            </form>
+        </div>
+    </section>
+    <!-- footer section -->
+
+    <section id="footer">
+        <div class="footer container container-child">
+            <div class="footer-top">
+                <ul>
+                    <li><a href="../html/index.html">Home</a></li>
+                </ul>
+            </div>
+            <div class="footer-bottom">
+                <div class="social">
+                    <ul>
+                        <li><a href="#"><i class="bi bi-facebook"></i></a></li>
+                        <li><a href="#"><i class="bi bi-instagram"></i></a></li>
+                        <li><a href="#"><i class="bi bi-whatsapp"></i></a></li>
+                        <li><a href="#"><i class="bi bi-telegram"></i></a></li>
+                    </ul>
+                </div>
+                <div class="info">
+                    <h3>HealYourself : F5 Your Life</h3>
+                    <p>Address: BBD Educational Group Uttardhauna, 226028, Lucknow</p>
+                </div>
+            </div>
+        </div>
+        <div class="detail">
+            <p>If you are in a life threatning situation - don't use this site. Call <span>+1(800) 273-8255</span> or <a href="https://www.thelivelovelaughfoundation.org/helpline"> <span>use these resources</span> </a> to get immediate help</p>
+        </div>
+    </section>
+    <!-- footer section end -->
+</body>
+</html>
